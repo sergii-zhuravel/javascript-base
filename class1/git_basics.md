@@ -18,3 +18,5 @@
 `git checkout -b BRANCH_NAME` -  создать ветку с именем BRANCH_NAME
 
 ` git checkout --orphan BRANCH_NAME` - создать ветку с именем BRANCH_NAME без истории
+
+`git merge BRANCH_NAME --allow-unrelated-histories` - мерж ветки которая была создана без истории (без родителя)
