@@ -1,0 +1,11 @@
+var a = prompt("Enter", "");
+var b = prompt("Enter", "");
+var aNumber = Number(a);
+var bNumber = Number(b);
+var multiplyOfNumbers = aNumber * bNumber;
+var segmentationOfNumbers = aNumber / bNumber;
+document.write("<h1>");
+document.write("-- Произведение чисел = " + multiplyOfNumbers + " --");
+document.write("<br>");
+document.write("-- Деление чисел = " + segmentationOfNumbers + " --");
+document.write("</h1>");
