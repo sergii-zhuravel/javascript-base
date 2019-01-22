@@ -1,5 +1,5 @@
-var a = prompt("Enter", "");
-var b = prompt("Enter", "");
+var a = prompt("Enter first Number", "");
+var b = prompt("Enter second Number", "");
 var aNumber = Number(a);
 var bNumber = Number(b);
 var multiplyOfNumbers = aNumber * bNumber;
