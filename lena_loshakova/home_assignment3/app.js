@@ -1,5 +1,20 @@
+//task 1
+var a = prompt("Enter the number:");
+document.write("<pre>");
 
-var a = prompt("vnhdkfjvnd");
-a++;
-++a;
-document.writeln(" ВВЕДЕННОЕ_ЧИСЛО");
+document.writeln("ЗАДАЧА 1:" );
+document.writeln("Ввод: " + a );
+
+ a++;
+ a += 1; 
+ ++a;
+ a = a + 1;
+ a += true; 
+
+ document.writeln("Результат: " + a ); 
+
+ //task 2
+ var b = prompt("Enter the fractional number:");
+
+ document.writeln("ЗАДАЧА 2:" );
+ document.writeln("Результат: " + ~~b );
