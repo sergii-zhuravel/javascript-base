@@ -1,5 +1,5 @@
 
-var num = prompt(num,"Введите число");
+var num = prompt("Введите число");
 document.write("<pre>");
 document.writeln("Введенное число: " + num);
 
@@ -12,7 +12,7 @@ document.writeln("Введенное число: " + num);
 document.writeln("Полученное число: " + num);
 
 
-var numDrobnoe = prompt(numDrobnoe,"Введите число для округления!");
+var numDrobnoe = prompt("Введите число для округления!");
 document.writeln("<br>" + "Число до округления: " + numDrobnoe);
 
     res = ~~numDrobnoe;
