@@ -1,5 +1,4 @@
 var a = prompt("Enter the number:");
-document.write("<pre>");
 
 document.writeln("Ввод: " + a );
 
