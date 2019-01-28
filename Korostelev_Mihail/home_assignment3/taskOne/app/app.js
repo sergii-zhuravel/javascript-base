@@ -5,4 +5,3 @@ aNumber++;
 ++aNumber;
 aNumber = aNumber + true;
 document.writeln("Ввод: " + startNumber + " Результат: " + aNumber);
-
