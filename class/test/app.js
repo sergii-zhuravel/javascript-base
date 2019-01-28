@@ -1,7 +1,13 @@
-var a, b, c, d ;
-var a = prompt("Введите число а", "");
-var b = prompt("Введите число b", "");
-var c = a * b ;
-var d = a / b ;
-document.write("-- Произведение чисел = " + c + " -- <br>") ;
-document.write("-- Деление чисел = " + d + " -- <br>") ;
+while (true) {
+    var userNum = parseInt(prompt("Введите число и нажмите 'Ok'! (для выхода введите '0')"));
+    if (!userNum) {
+        break;
+    }
+    if (userNum % 2) {
+        document.write("Число " + userNum + " является нечетным" + "<br>");
+        console.log("Число " + userNum + " является нечетным");
+    } else {
+        document.write("Число " + userNum + " является четным" + "<br>");
+        console.log("Число " + userNum + " является четным");
+    }
+} 
