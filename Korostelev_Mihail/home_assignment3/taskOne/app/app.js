@@ -4,4 +4,5 @@ aNumber += 1;
 aNumber++;
 ++aNumber;
 aNumber = aNumber + true;
+aNumber += +"1";
 document.writeln("Ввод: " + startNumber + " Результат: " + aNumber);
