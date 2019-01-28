@@ -1,11 +1,14 @@
- //Цикл в цикле
- document.write ("<table>")
- for (var i = 1; i <= 10; i++) {
-    document.write ("<tr>");
-        for (var j = 1; j <= 10; j++){
-            debugger;//debugger точка остановки в коде
-            document.write("<td>" + (j * i)+ "</td>");
-        }
-    document.write ("</tr>");
+for (var userNumber = Number.parseFloat(prompt("Enter your value (to close enter 0)"));
+  userNumber > 0;
+  userNumber = parseFloat(prompt("Enter your value (to close enter 0)"))
+) {
+  if (userNumber == 0) {
+    break;
+  } else {
+    if (userNumber % 2 == 0) {
+      document.write(" Четное число " + "<br />");
+    } else {
+      document.write(" Не четное число " + "<br />");
+    }
+  }
 }
-document.write ("</table>")
