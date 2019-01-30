@@ -6,9 +6,9 @@ for (var userNumber = Number.parseFloat(prompt("Enter your value (to close enter
     break;
   } else {
     if (userNumber % 2 == 0) {
-      document.write(" Четное число " + "<br />");
+      console.log(" Четное число " + "<br />");
     } else {
-      document.write(" Не четное число " + "<br />");
+      console.log(" Не четное число " + "<br />");
     }
   }
 }
