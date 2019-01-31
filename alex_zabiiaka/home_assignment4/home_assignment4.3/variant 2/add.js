@@ -1,6 +1,6 @@
 (function () {
         var tbl = document.createElement("table");
-        var head= document.head("head")
+        var hd = document.head("head")
     for (var i = 1; i <= 10; i++) {
         var row = tbl.insertRow(i);
         for (var j = 1; j <= 10; j++) {
