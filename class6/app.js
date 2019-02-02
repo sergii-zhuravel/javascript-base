@@ -1,5 +1,8 @@
 var STATE = {
-  student: {},
+  student: {
+    name: "Mikita",
+    age: 30
+  },
   prepod: {}
 }
 
@@ -13,18 +16,37 @@ function runMyApp() {
 }
 
 function askNextCommandWithDelay() {
-  setTimeout(askNextCommand, 20);
+  setTimeout(askNextCommand, 30);
 }
 
 function askNextCommand() {
   var command = prompt("Enter command number:");
-  if (command == 0) {
-    showByeMessage();
-  } else {
-    askNextCommand();
+  switch(command) {
+    case '1':
+      showStudentData();
+      askNextCommandWithDelay();
+      break;
+    case '0':
+      showByeMessage();
+      break;
+    default:
+      askNextCommand();
   }
+  // if (command == 0) {
+  //   showByeMessage();
+  // } else if (command == 1) {
+  //   showStudentData();
+  // } else {
+  //   askNextCommand();
+  // }
 }
-
+function showStudentData() {
+  var studentDataText = '<div class="container">';
+  studentDataText += '<p> Student Name is: ' + STATE.student.name + '</p>';
+  studentDataText += '</div>'
+  clearScreen();
+  showMessage(getStyles() + studentDataText);
+}
 function clearScreen() {
   document.body.innerHTML = '';
 }
@@ -43,6 +65,11 @@ function showWelcomeMessage() {
   var welcomeText = `
     <div class="container">
       <p>Hello. Welcome to my app!</p>
+      <p>Commands:</p>
+      <ul>
+        <li>Show student data: 1 </li>
+        <li>Exit programm: 0</li>
+      </ul>
     </div>
   `
   showMessage(getStyles() + welcomeText);
