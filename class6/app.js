@@ -8,9 +8,35 @@ runMyApp();
 
 
 function runMyApp() {
-
   showWelcomeMessage();
-  // askNextCommand();
+  askNextCommandWithDelay();
+}
+
+function askNextCommandWithDelay() {
+  setTimeout(askNextCommand, 20);
+}
+
+function askNextCommand() {
+  var command = prompt("Enter command number:");
+  if (command == 0) {
+    showByeMessage();
+  } else {
+    askNextCommand();
+  }
+}
+
+function clearScreen() {
+  document.body.innerHTML = '';
+}
+
+function showByeMessage() {
+  var byeText = `
+    <div class="container">
+      <p>Bye! Come back soon!</p>
+    </div>
+  `
+  clearScreen();
+  showMessage(getStyles() + byeText);
 }
 
 function showWelcomeMessage() {
