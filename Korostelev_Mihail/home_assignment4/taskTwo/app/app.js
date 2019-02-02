@@ -9,9 +9,9 @@ for (
     break;
   } else {
     if (userNumber % 2 == 0) {
-      console.log(" Четное число " + "<br />");
+      console.log(" Четное число " + "<br>");
     } else {
-      console.log(" Не четное число " + "<br />");
+      console.log(" Не четное число " + "<br>");
     }
   }
 }
