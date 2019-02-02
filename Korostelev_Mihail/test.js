@@ -93,25 +93,107 @@ for (var w = 10; w > 0; w--) {
 for (var jw = 10; jw > 0; jw--) {
   if (jw == 5) continue;
   console.log(jw);
-}// miss 5
+} // miss 5
 for (var jq = 10; jq > 0; jq--) {
-    if (jq % 2 == 1) continue;
-    console.log(jq);
-  } //четные
-  for (var wq = 10; wq > 0; wq--) {
-    if (wq % 2 == 0) continue;
-    console.log(jq);
-  } //нечетные
-var sum = 0 //sum = аккумулятор // i = переменная
-  for ( var i = 0; i < 10; i++) {
-      sum += i; // для умножения i = 1 formula sum *=1
-  }
+  if (jq % 2 == 1) continue;
+  console.log(jq);
+} //четные
+for (var wq = 10; wq > 0; wq--) {
+  if (wq % 2 == 0) continue;
+  console.log(jq);
+} //нечетные
+var sum = 0; //sum = аккумулятор // i = переменная
+for (var i = 0; i < 10; i++) {
+  sum += i; // для умножения i = 1 formula sum *=1
+}
 
-  //Цикл в цикле
-  for (var i = 1; i <= 10; i++) {
-      for (var j = 1; j <= 10; j++){
-          debugger;//debugger точка остановки в коде
-          document.write(i * j + " ");
-      }
-    document.write ("<BR />")
+//Цикл в цикле
+for (var i = 1; i <= 10; i++) {
+  for (var j = 1; j <= 10; j++) {
+    debugger; //debugger точка остановки в коде
+    document.write(i * j + " ");
   }
+  document.write("<BR />");
+}
+//Урок 5
+//LESSON 5
+
+//функциональное програмирование  !!!!!!
+
+//функция
+function newFunction() {}
+//каждая функция чтото должна возвращать
+//eсли в функции нет returne возвращает функция undefined
+function myFunction() {
+  var undefined = "Oops";
+  return underfined;
+} //look result
+
+function funNew() {
+  return 1;
+  console.log("Hello");
+}
+funNew(); // return работает как break
+
+//IEFE    !!!!!!!!!!!
+
+var sum = new Function("a,b", "return a+b"); // способ создания функции, для динамического создания функции
+
+var aA = +prompt("enter value");
+var bB = +prompt("enter value");
+var functionBody = prompt("Enter function");
+var myFunction = new Function("a,b", functionBody);
+console.log(aA, bB);
+
+//модульность разбивание кода на функции
+function generateFunction() {
+  var aAa = +prompt("enter value"); //аргументы aAa доступны только в этой функции
+  var bBb = +prompt("enter value");
+  var functionBody1 = prompt("Enter function");
+  var myFunction1 = new Function("a,b", functionBody1);
+  return myFunction1;
+}
+
+//function declaretion
+function sum(a, b) {
+  return a + b;
+}
+
+//function expression
+var sub = function(a, b) {
+  return a - b;
+}; //обьявили функция sub с параметрами а и b
+
+//хоистинг
+console.log(a * 2);
+//ошибка не определен аргумент
+//вводим значение аргумента
+var a = 5;
+//ошибка пишет NaN
+//хоистинг а присваиваеться undefined, віполняет console и только потом присваевает а = 5
+
+//параметры функции - это локальные переменные
+
+function sumRange() {
+  var a = arguments;
+  var sum = 0;
+  for (var i = 0; i < a.length; i++) {
+    sum += a[i];
+  }
+  return sum;
+}
+
+//функции высшего порядка - принимают и/или возвращают функцию
+//как вызвать колбек??
+
+function sum(a, b) {
+  return a + b;
+}
+function calculator(a, b, mathFunch) {
+  if (a == undefined || b == undefined || mathFunch == undefined || typeof mathFunch != 'function') {
+    console.error("wrong value");
+    return;
+  }
+  return mathFunch(a, b);
+}
+calculator(3, 5, sum);

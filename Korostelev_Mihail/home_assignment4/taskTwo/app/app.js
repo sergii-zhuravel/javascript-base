@@ -1,5 +1,8 @@
-for (var userNumber = Number.parseInt(prompt("Enter your value (to close enter 0)"));
-  userNumber > 0;
+for (
+  var userNumber = Number.parseInt(
+    prompt("Enter your value (to close enter 0)")
+  );
+  userNumber != 0;
   userNumber = parseInt(prompt("Enter your value (to close enter 0)"))
 ) {
   if (userNumber == 0) {
