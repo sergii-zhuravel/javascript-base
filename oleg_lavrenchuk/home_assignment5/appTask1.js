@@ -20,14 +20,14 @@ switch (x) {
 }
 
 function sum(a, b) {
-  return alert(a + b);
+  return console.log(a + b);
 }
 function sub(a, b) {
-  return alert(a - b);
+  return console.log(a - b);
 }
 function mult(a, b) {
-  return alert(a * b);
+  return console.log(a * b);
 }
 function div(a, b) {
-  return alert(a / b);
+  return console.log(a / b);
 }
