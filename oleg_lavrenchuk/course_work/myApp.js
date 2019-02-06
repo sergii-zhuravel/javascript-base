@@ -6,7 +6,7 @@ function toDoList() {
       "1. Добавить новую задач.\n" +
         "2. Вывести задачи на экран.\n" +
         "3. Удалить задачи.\n" +
-        "4. Сортировать задачи по 'Id'.\n" +
+        "4. Сортировать задачи по 'Title'.\n" +
         "5. Завершить работу с приложением."
     );
 
@@ -94,7 +94,9 @@ function toDoList() {
 
   function sortTasks(sortMass) {
     sortMass.sort(function(a, b) {
-      return a.id - b.id;
+      if (a.title > b.title) return 1;
+      if (a.title < b.title) return -1;
+      return 0;
     });
     clearData();
     showTasks(sortMass);
