@@ -190,7 +190,12 @@ function sum(a, b) {
   return a + b;
 }
 function calculator(a, b, mathFunch) {
-  if (a == undefined || b == undefined || mathFunch == undefined || typeof mathFunch != 'function') {
+  if (
+    a == undefined ||
+    b == undefined ||
+    mathFunch == undefined ||
+    typeof mathFunch != "function"
+  ) {
     console.error("wrong value");
     return;
   }
@@ -198,50 +203,57 @@ function calculator(a, b, mathFunch) {
 }
 calculator(3, 5, sum);
 
-
 //урок 6
-//LESSON 
+//LESSON
 var o = {};
-var fieldName = prompt('Enter name');
-o [fieldName] = prompt ('Enter value');
+var fieldName = prompt("Enter name");
+o[fieldName] = prompt("Enter value");
 
-
-for (key in o) {console.log(key)};//обращение ко всем полям  в объекте
+for (key in o) {
+  console.log(key);
+} //обращение ко всем полям  в объекте
 
 for (key in o) {
   o[key] += 1;
 }
 
 for (key in 0) {
-  if (o[key] != o[key]){
+  if (o[key] != o[key]) {
     o[key] = underfined;
   }
 }
 //LESSON 7
-function logUppercaseText (n) {console.log(n.toUpperCase());}
-undefined
-var message = ["hello","world"];
-undefined
-message.forEach(logUppercaseText)
+function logUppercaseText(n) {
+  console.log(n.toUpperCase());
+}
+undefined;
+var message = ["hello", "world"];
+undefined;
+message.forEach(logUppercaseText);
 
-var numbers = [1,2,12,4,6,8,0]
+var numbers = [1, 2, 12, 4, 6, 8, 0];
 numbers.filter(function(n) {
   return n >= 0 ? 1 : 0;
-  })
+});
 
-numbers.sort() //string
-message.reverse() //string
-numbers.sort(function (a,b) {return a-b;})//int
-numbers.sort(function (a,b) {if (a>b) return 1;if (a===b)return 0; if(a<b)return - 1});//int
+numbers.sort(); //string
+message.reverse(); //string
+numbers.sort(function(a, b) {
+  return a - b;
+}); //int
+numbers.sort(function(a, b) {
+  if (a > b) return 1;
+  if (a === b) return 0;
+  if (a < b) return -1;
+}); //int
 
-message[0][0]
+message[0][0];
 
-var nm = [
-  [1,2],
-  [3,4],
-  [5,6]
-]
-function findIndexes(nm,n)
- for (var i = 0; i< nm.length; i++) {for (var j = 0; j < nm[i].length; j++) {
-   if(nm[i][j] === n) return [i,j]}
+var nm = [[1, 2], [3, 4], [5, 6]];
+function findIndexes(nm, n) {
+  for (var i = 0; i < nm.length; i++) {
+    for (var j = 0; j < nm[i].length; j++) {
+      if (nm[i][j] === n) return [i, j];
+    }
+  }
 }
