@@ -30,7 +30,7 @@ function clearScreen() {
 }
 function start() {
   commandList();
-}
+} 
 function output(arr) {
   var html = ``;
   for (var i = 0; i < arr.length; i++) {
