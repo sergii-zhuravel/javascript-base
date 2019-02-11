@@ -89,7 +89,7 @@ function showCommand() {
     clearScreen();
     for (var i = 0; i < toDoList.length; i++) {
         document.body.innerHTML +=
-        "<div style='border: 2px solid green; background-color: deepskyblue; padding: 5px; width: 150px; font-size: 20px;'><div style='text-align: right; color: blue'>Id: " + toDoList[i].id + "</div>" + "<div style='text-align: left;'>" + toDoList[i].title + "</div></div>"
+            "<div style='border: 2px solid green; background-color: deepskyblue; padding: 5px; width: 150px; font-size: 20px;'><div style='text-align: right; color: blue'>Id: " + toDoList[i].id + "</div>" + "<div style='text-align: left;'>" + toDoList[i].title + "</div></div>"
     }
     askNextCommandWithDelay();
 }
@@ -128,4 +128,4 @@ function getStyle() {
   </style>
   `;
     return STYLE;
-}
+};
