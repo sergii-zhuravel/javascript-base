@@ -30,7 +30,7 @@ function clearScreen() {
 }
 function start() {
   commandList();
-} 
+}
 function output(arr) {
   var html = ``;
   for (var i = 0; i < arr.length; i++) {
@@ -39,8 +39,7 @@ function output(arr) {
     task += `</div>`;
     html += task;
   }
-  document.write(html);
-  showMessage(getStyle() + task);
+  showMessage(getStyle() + html);
 }
 function addNewTask() {
   var task = {};
@@ -76,7 +75,7 @@ function end() {
   showMessage(getStyle() + byeText);
 }
 function showMessage(text) {
-  document.writeln(text);
+  document.write(text);
 }
 function getStyle() {
   var STYLE = `
